@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "prepare": "husky install",
+    "prepare": "husky install && chmod ug+x .husky/* && chmod ug+x .git/hooks/*",
     "lint:format": "npx --no-install lint-staged && npx --no-install pretty-quick --staged"
   },
   "private": true,
