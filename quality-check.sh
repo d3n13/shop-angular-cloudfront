@@ -4,3 +4,4 @@ npm audit;
 npm run lint;
 npm run e2e;
 npm run test;
+npm run sonar-scanner:scan;
