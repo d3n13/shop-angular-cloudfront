@@ -24,12 +24,12 @@ while [[ $# -gt 0 ]]; do
 done
 set -- "${POSITIONAL_ARGS[@]}";
 
-npm i;
+yarn;
 
 if [ $ENV_CONFIGURATION == 'production' ]; then
-  npm run build-prod;
+  yarn build-prod;
 else
-  npm run build;
+  yarn build;
 fi
 
 if [ -f $BUILD_ARCHIVE_PATH ]; then

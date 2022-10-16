@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-npm audit;
-npm run lint;
-npm run e2e;
-npm run test;
-npm run sonar-scanner:scan;
+yarn audit;
+yarn lint;
+yarn e2e;
+yarn test;
+yarn sonar-scanner:scan;

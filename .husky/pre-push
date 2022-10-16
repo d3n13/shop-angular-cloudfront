@@ -1,5 +1,5 @@
 #!/bin/sh
 
-npm run test;
-npm run sonar-scanner:scan;
-npm audit;
+yarn test;
+yarn sonar-scanner:scan;
+yarn audit;

@@ -1,6 +1,6 @@
 # Shop Angular Cloudfront
 
-Angular version: ~12.
+Angular version: ~14.
 
 Repo maintainers:
 
@@ -22,7 +22,7 @@ If you would like to help implementing some feature, you should ask the maintain
 
 ## Get up and running
 
-Prerequisites: NodeJS v14
+Prerequisites: Yarn v1
 
 Follow the steps:
 
