@@ -11,7 +11,8 @@
     "e2e": "ng e2e",
     "sonar-scanner:scan": "sonar-scanner -Dsonar.login=$SONAR_LOGIN -Dsonar.password=$SONAR_PASSWORD",
     "prepare": "husky install && chmod ug+x .husky/* && chmod ug+x .git/hooks/*",
-    "lint:format": "npx --no-install lint-staged && npx --no-install pretty-quick --staged"
+    "lint:format": "npx --no-install lint-staged && npx --no-install pretty-quick --staged",
+    "cicd:local": "bash ./local_ci_cd.sh"
   },
   "private": true,
   "dependencies": {
@@ -54,6 +55,7 @@
     "eslint-plugin-rxjs": "^3.3.0",
     "husky": "^6.0.0",
     "jasmine-core": "~3.6.0",
+    "jasmine-spec-reporter": "^7.0.0",
     "karma": "^6.3.20",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.0.3",

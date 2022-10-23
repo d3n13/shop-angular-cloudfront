@@ -24,7 +24,7 @@ while [[ $# -gt 0 ]]; do
 done
 set -- "${POSITIONAL_ARGS[@]}";
 
-yarn;
+yarn install --frozen-lockfile --check-files;
 
 if [ $ENV_CONFIGURATION == 'production' ]; then
   yarn build-prod;
