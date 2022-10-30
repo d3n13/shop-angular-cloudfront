@@ -1,0 +1,25 @@
+on:
+  push:
+    branches:
+      - "**" # TODO | That would be master
+name: build-test-deploy
+jobs:
+  job:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install SSH Key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.AWS_KEY }}
+          name: key_pair_1.pem
+          config: ${{ secrets.SSH_CONFIG }}
+          if_key_exists: replace
+          known_hosts: ${{ secrets.KNOWN_HOSTS }}
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: "yarn"
+      - name: Publish
+        run: yarn cicd:local

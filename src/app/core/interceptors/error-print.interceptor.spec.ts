@@ -8,12 +8,4 @@ describe('ErrorPrintInterceptor', () => {
       providers: [ErrorPrintInterceptor],
     })
   );
-
-  it('should be created', () => {
-    const interceptor: ErrorPrintInterceptor = TestBed.inject(
-      ErrorPrintInterceptor
-    );
-
-    expect(interceptor).toBeTruthy();
-  });
 });
