@@ -16,4 +16,4 @@ jobs:
           if_key_exists: replace
           known_hosts: ${{ secrets.KNOWN_HOSTS }}
       - id: publish
-        run: cd shop-angular-cloudfront/shop-angular-cloudfront && yarn cidi:local
+        run: yarn cidi:local
