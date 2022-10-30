@@ -4,4 +4,4 @@ yarn audit;
 yarn lint;
 yarn e2e;
 yarn test;
-yarn sonar-scanner:scan || true;
+yarn sonar-scanner:scan 2>/dev/null
