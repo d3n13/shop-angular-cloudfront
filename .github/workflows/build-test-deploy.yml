@@ -15,6 +15,7 @@ jobs:
           config: ${{ secrets.CONFIG }}
           if_key_exists: replace
           known_hosts: ${{ secrets.KNOWN_HOSTS }}
+      - uses: actions/checkout@v3
       - name: Setup node
         uses: actions/setup-node@v3
         with:
