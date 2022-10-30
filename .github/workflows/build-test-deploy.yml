@@ -15,9 +15,10 @@ jobs:
           config: ${{ secrets.CONFIG }}
           if_key_exists: replace
           known_hosts: ${{ secrets.KNOWN_HOSTS }}
-      - id: publish
+      - name: Setup node
         uses: actions/setup-node@v3
         with:
           node-version: 16
           cache: "yarn"
+      - name: Publish
         run: yarn cidi:local
