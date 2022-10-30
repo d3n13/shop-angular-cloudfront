@@ -22,4 +22,4 @@ jobs:
           node-version: 16
           cache: "yarn"
       - name: Publish
-        run: ls && yarn cidi:local
+        run: yarn cicd:local
