@@ -10,8 +10,8 @@ jobs:
       - name: Install SSH Key
         uses: shimataro/ssh-key-action@v2
         with:
-          key: ${{ secrets.AWS_KEY }}
+          key: "${{ secrets.AWS_KEY }}"
           name: key_pair_1.pem
-          config: ${{ secrets.SSH_CONFIG }}
+          config: "${{ secrets.SSH_CONFIG }}"
       - id: publish
         run: yarn cidi:local
